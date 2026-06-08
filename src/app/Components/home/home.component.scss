@@ -1,0 +1,23 @@
+.home-div {
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 10%;
+}
+
+.intro-div {
+  flex: 1;
+  width: 50%;
+}
+.intro-pp-div {
+  width: 50%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-stack {
+  color: var(--app-primary-color);
+  font-weight: bold;
+}

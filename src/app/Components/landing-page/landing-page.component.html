@@ -1,0 +1,72 @@
+<div>
+  <nav class="nav-bar" appHideOnScroll>
+    <div class="animated-div">
+      <div class="space-holder"></div>
+      <button class="glow-continously animated-btn" type="button" (click)="scrollToComponent('home')" style="font-size: 1.3rem;">RajaLakshmi - Portfolio
+      </button>  
+    </div>
+    <div class="animated-div">
+      <button class="glow-on-hover animated-btn" type="button" (click)="scrollToComponent('home')">Home</button>  
+      <button class="glow-on-hover animated-btn" type="button" (click)="scrollToComponent('about')">About</button>  
+      <button class="glow-on-hover animated-btn" type="button" (click)="scrollToComponent('project')">Project</button>  
+      <button class="glow-on-hover animated-btn" type="button" (click)="scrollToComponent('skills')">Skills</button>  
+      <button class="glow-on-hover animated-btn" type="button" (click)="scrollToComponent('contributions')">Contributions</button>  
+      <button class="glow-on-hover animated-btn" type="button" (click)="scrollToComponent('bonus')" style="margin-right: 30px;">Bonus</button>  
+    </div>
+  </nav>
+  <div class="outer">
+    <div #home class="nav-bar-height">
+      <app-home></app-home>
+    </div>
+    <div #about class="nav-bar-height">
+      <app-about></app-about>
+    </div>
+    <div #project class="nav-bar-height">
+      <app-projects></app-projects>
+    </div>
+    <div #skills class="nav-bar-height">
+      <app-skills></app-skills>
+    </div>
+
+    <div #contributions class="nav-bar-height">
+      <app-contributions></app-contributions>
+    </div>
+    <div #bonus class="quotes-comp">
+      <app-quote></app-quote>
+    </div>
+    <!-- <div #services class="nav-bar-height">services</div>
+    <div #contact  class="nav-bar-height">contact</div> -->
+    <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <app-footer (authorNameClickedEvent)="scrollToComponent('home')"></app-footer>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="wrap">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+ 
+</div> -->

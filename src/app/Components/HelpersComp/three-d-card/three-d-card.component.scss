@@ -1,0 +1,124 @@
+.tilting-card-body {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.mouse-position-tracker {
+  position: absolute;
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  z-index: 2;
+}
+
+.mouse-position-tracker:nth-child(3n - 2) {
+  left: 0;
+}
+.mouse-position-tracker:nth-child(3n - 1) {
+  left: calc(100% / 3);
+}
+
+.mouse-position-tracker:nth-child(3n) {
+  right: 0;
+}
+
+.mouse-position-tracker:nth-child(n + 4):nth-child(-n + 6) {
+  top: calc(100% / 3);
+}
+.mouse-position-tracker:nth-child(n + 7):nth-child(-n + 9) {
+  bottom: 0;
+}
+
+.tilting-card-wrapper {
+  cursor: grab;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.tilting-card-body {
+  background-color: var(--app-secondary-color);
+  position: absolute;
+  inset: 0;
+  border: 10px solid var(--app-primary-color);
+
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.tilting-card-body > :where(h1, p) {
+  background: white;
+  padding: 0.2rem;
+  margin: 0;
+}
+
+.tilting-card-body {
+  --perspective: 500px;
+  --rotationX: 0;
+  --rotationY: 0;
+  --rotationZ: 0;
+  --angle: 15deg;
+  transform: perspective(var(--perspective)) rotateX(var(--rotationX))
+    rotateY(var(--rotationY)) rotateZ(var(--rotationZ));
+  transition: transform 500ms ease;
+}
+
+.mouse-position-tracker:nth-child(1):hover ~ .tilting-card-body {
+  --rotationX: var(--angle);
+  --rotationY: calc(var(--angle) * -1);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(2):hover ~ .tilting-card-body {
+  --rotationX: var(--angle);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(3):hover ~ .tilting-card-body {
+  --rotationX: var(--angle);
+  --rotationY: var(--angle);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(4):hover ~ .tilting-card-body {
+  --rotationY: calc(var(--angle) * -1);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(6):hover ~ .tilting-card-body {
+  --rotationY: var(--angle);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(7):hover ~ .tilting-card-body {
+  --rotationY: calc(var(--angle) * -1);
+  --rotationX: calc(var(--angle) * -1);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(8):hover ~ .tilting-card-body {
+  --rotationX: calc(var(--angle) * -1);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}
+
+.mouse-position-tracker:nth-child(9):hover ~ .tilting-card-body {
+  --rotationY: var(--angle);
+  --rotationX: calc(var(--angle) * -1);
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+}

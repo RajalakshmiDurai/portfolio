@@ -1,0 +1,118 @@
+$main-color: #002733;
+$dark-color: #001925;
+$light-color: #87a4b6;
+$medium-light-color: #013747;
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  max-width: 1300px;
+  margin: 0px auto 0px auto;
+}
+
+.skills {
+  cursor: pointer;
+  height: 200px;
+
+  .skills-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 50px;
+    width: 80%;
+
+    @media only screen and (min-width: 768px) and (max-width: 1199px) {
+      height: 65%;
+    }
+
+    @media only screen and (min-width: 1200px) and (max-width: 1499px) {
+      height: 75%;
+    }
+
+    @media only screen and (min-width: 1500px) {
+      height: 100%;
+    }
+
+    .box {
+      flex: 1 1 25%;
+      align-items: center;
+
+      flex-direction: column;
+      display: flex;
+      text-align: center;
+      border: 10px solid var(--app-primary-color);
+      border-radius: 30px;
+      box-shadow: 0 0 15px var(--app-primary-color),
+        0 0 10px var(--app-primary-color), 0 0 15px var(--app-primary-color);
+      transition: all 0.3s ease-in;
+
+      .image {
+        transition: all 0.3s ease-in-out 0.1s;
+        img {
+          max-width: 60%;
+          object-fit: contain;
+        }
+      }
+
+      .title {
+        font-size: 1em;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        box-shadow: 0 0 30px var(--app-primary-color),
+          0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+        transform: scale(1.1);
+
+        .image {
+          transform: scale(1.5) translateY(-20px);
+          img {
+            animation: bouncing 0.5s 0.3s;
+          }
+        }
+        .title {
+          letter-spacing: 2px;
+          text-shadow: 0 0 30px var(--app-primary-color),
+            0 0 50px var(--app-primary-color),
+            0 0 100px var(--app-primary-color);
+        }
+      }
+
+      @media (max-width: 1100px) {
+        flex: 1 0 25%;
+      }
+      @media (max-width: 630px) {
+        flex: 1 0 35%;
+        padding: 15px;
+        .image {
+          img {
+            max-width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes bouncing {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}

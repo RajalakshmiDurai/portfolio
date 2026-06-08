@@ -1,0 +1,26 @@
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill-item {
+  width: 18%;
+  outline: none;
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 0%;
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    margin-bottom: 1%;
+  }
+
+  @media only screen and (min-width: 1500px) {
+    margin-bottom: 5%;
+  }
+}
+.skills-div {
+  outline: none;
+  margin-left: 10%;
+  margin-right: 10%;
+}

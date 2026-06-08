@@ -1,0 +1,38 @@
+.split-line {
+  border: 2px solid var(--app-primary-color);
+  width: 90%;
+  box-shadow: 0 0 30px var(--app-primary-color),
+    0 0 50px var(--app-primary-color), 0 0 100px var(--app-primary-color);
+  border-radius: 12px;
+}
+
+.footer-line-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.end-content-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.end-content-outer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.copy-icon {
+  color: white;
+  font-size: 30px;
+}
+.author-name {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.author-name-div{
+  cursor: pointer;
+}
